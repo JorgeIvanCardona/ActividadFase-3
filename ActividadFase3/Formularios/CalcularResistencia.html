@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Calculadora de resistencias</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <h2>Calculadora de Resistencias</h2>
+	<style type ="text/css">
+		h2 {
+		  color: #00BFFF;
+		  text-align: center;
+		  padding-top: 20;
+		}
+		
+	</style>
+	<title>Formulario resistencias</title>
+</head>
+<body>
+
+  <div class="container">
+
+<script>
+	function calcular(){
+    
+    var banda1 =document.form.banda1.value;
+    var banda2 =document.form.banda2.value;
+    var xbanda3 =document.form.banda3.value;
+    var bandas1_2 =banda1.toString()+banda2.toString();
+    var vlr =parseFloat(bandas1_2)*parseFloat(xbanda3);
+    document.form.valor.value=vlr;
+}
+</script>
+
+  <form name="form" action="resistencia.html" method="POST">
+    
+	<label>Banda uno</label>
+	<select name="banda1" placeholder="Seleccionar" class="form-control">
+	  <option value="0">Negro</option>
+	  <option value="1">Marrón</option>
+	  <option value="2">Rojo</option>
+	  <option value="3">Naranja</option>
+	  <option value="4">Amarillo</option>
+	  <option value="5">Verde</option>
+	  <option value="6">Azul</option>
+	  <option value="7">Morado</option>
+	  <option value="8">Gris</option>
+	  <option value="9">Blanco</option>
+	  <option value="0.1">Dorado</option>
+	  <option value="0.01">Plateado</option>
+	</select><br>
+
+	<label>Banda dos</label>
+	<select name="banda2" class="form-control">
+	  <option value="0">Negro</option>>
+	  <option value="1">Marrón</option>
+	  <option value="2">Rojo</option>
+	  <option value="3">Naranja</option>
+	  <option value="4">Amarillo</option>
+	  <option value="5">Verde</option>
+	  <option value="6">Azul</option>
+	  <option value="7">Morado</option>
+	  <option value="8">Gris</option>
+	  <option value="9">Blanco</option>
+	  <option value="0.1">Dorado</option>
+	  <option value="0.01">Plateado</option>
+	</select><br>
+	
+	<label>Banda tres</label>
+	<select name="banda3" class="form-control">
+	  <option value="1">Negro</option>
+	  <option value="10">Marrón</option>
+	  <option value="100">Rojo</option>
+	  <option value="1000">Naranja</option>
+	  <option value="10000">Amarillo</option>
+	  <option value="100000">Verde</option>
+	  <option value="1000000">Azul</option>
+	  <option value="10000000">Morado</option>
+	  <option value="100000000">Gris</option>
+	  <option value="1000000000">Blanco</option>
+	  <option value="0.1">Dorado</option>
+	  <option value="0.01">Plateado</option>
+	</select><br>
+	
+    <input type="Button" name="" value="Calcular" onclick="calcular()" class="btn btn-primary">
+    <br><br>
+	<label style="font-size:20px">Resultado:</label>
+	<input style="font-size:20px" type="text" class="form-control" id="valor" name="c" placeholder="Resultado">
+  </div>
+  </form>
+</body>
+</html>

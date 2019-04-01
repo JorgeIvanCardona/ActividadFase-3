@@ -1,0 +1,75 @@
+<html lang="es">
+  <head>
+	<meta charset ="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<h2>Consulta de Productos</h2>
+	<style type ="text/css">
+		h2 {
+		  color: #00BFFF;
+		  text-align: center;
+		  padding-top: 20;
+		}
+		
+	</style>
+	<title>ConsultarProductos</title>
+  </head>
+  <body>
+	
+	<div class="container">
+	  <script>
+		/*function Facturar() {
+	
+		var iva =0.16;
+		var vnf =0.1;
+		var codPto =document.form1.codPto.value;
+		var cantPto =document.form1.cantPto.value;
+		var vlrUnit =document.form1.vlrUnit.value;
+		var subTot =parseFloat(vlrUnit)*parseFloat(cantPto);
+		var vlrIva =parseFloat(subTot)*iva;
+		var vlrVnf =parseFloat(subTot)*vnf;
+		var totlFact =parseFloat(subTot)+vlrIva;
+		document.form1.vlrIva.value =vlrIva;
+		document.form1.vlrVnf.value =vlrVnf;
+		document.form1.totFact.value =totlFact;
+		}
+		*/
+	  </script>
+	  
+	  <form name="form1" action="CalcularVlrFactura.html" method="POST">
+		<div class="form-group">
+		  
+  		    <label>Código del prosucto</label>
+		    <input type="text" id="codPto" class="form-control" name="codPto">
+			<br>
+			
+			<input type="button" value="Consultar" onclick="Consultar()" class="btn btn-primary">
+		    <input type="reset" value="Limpiar" class="btn btn-primary">
+			<br><br>
+			
+		    <label>Código del prosucto</label>
+		    <input type="text" id="codPto" class="form-control" name="codPto">
+			
+			<label>Nombre del prosucto</label>
+		    <input type="text" id="codPto" class="form-control" name="codPto">
+		  
+		    <label>Precio unitario</label>
+		    <input type="text" id="vlrUnit" class="form-control" name="vlrUnit">
+		    
+			<label>Impuesto IVA</label>
+		    <input type="text" id="vlrIva" class="form-control" placeholder="16%" name="vlrIva">
+			
+			<label>Utilidad de la venta</label>
+		    <input type="text" id="vlrVnf" class="form-control" placeholder="10%" name="vlrVnf">
+			
+			<label>Cantidad de productos disponibles</label>
+		    <input type="text" id="cantPto" class="form-control" name="cantPto">
+			
+		</div>
+	  </form>
+	</div>
+  </body>
+</html>

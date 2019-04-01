@@ -1,0 +1,60 @@
+<html lang="es">
+  <head>
+	<meta charset ="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<style>
+		h2 {
+		  color: #00BFFF;
+		  text-align: center;
+		}
+	</style>
+	<title>Formulario calculadora</title>
+	<h2>Calcular precio de venta</h2>
+  </head>
+    <body>
+	
+	<div class="container">
+	  <script>
+		function calPrecio() {
+	
+		var vlrComp =document.form1.vComp.value;
+		var prcntUtil =document.form1.pUtil.value;
+		var pUtil =parseFloat(prcntUtil)/100;
+		var prcntIva =document.form1.pIva.value;
+		var pIva =parseFloat(prcntIva)/100;
+		var calUtil =parseFloat(vlrComp)*parseFloat(pUtil);
+		var pSinIva =parseFloat(vlrComp)+parseFloat(calUtil);
+		var calIva =parseFloat(pSinIva)*parseFloat(pIva);
+		var precVent =parseFloat(pSinIva)+parseFloat(calIva);
+		document.form1.pVent.value =precVent;
+		}
+	  </script>
+	  
+	  <form name="form1" action="CalcularPrecio.html" method="POST">
+		<div class="form-group">
+		  
+  		    <label>Valor de compra</label>
+		    <input type="text" id="vComp" class="form-control" name="vComp">
+		  
+		    <label>Porcentaje de utilidad</label>
+		    <input type="text" id="pUtil" class="form-control" name="pUtil">
+		  
+		    <label>Porcentaje del IVA</label>
+		    <input type="text" id="pIva" class="form-control" name="pIva">
+			<br>
+			<input type="button" value="Calcular" onclick="calPrecio()" class="btn btn-primary">
+			<input type="reset" value="Limpiar" class="btn btn-primary">
+			<br><br>
+		    <label style="font-size:20px">Precio de venta</label>
+		    <input style="font-size:20px" type="text" id="pVent" class="form-control" name="pVent">
+		  
+		</div>
+	  </form>
+	</div>
+    </body>
+</html>
